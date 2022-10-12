@@ -10,5 +10,6 @@ wget https://raw.githubusercontent.com/mrdoob/three.js/r${VERSION}/build/three.m
 rm TrackballControls.js | true
 wget https://raw.githubusercontent.com/mrdoob/three.js/r${VERSION}/examples/js/controls/TrackballControls.js
 
-rm GLTFLoader.js | true
-wget https://raw.githubusercontent.com/mrdoob/three.js/r${VERSION}/examples/js/loaders/GLTFLoader.js
+# Note: now using local GLTFLoader.js
+# rm GLTFLoader.js | true
+# wget https://raw.githubusercontent.com/mrdoob/three.js/r${VERSION}/examples/js/loaders/GLTFLoader.js
