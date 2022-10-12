@@ -64,8 +64,14 @@ function init() {
   scene.background = new THREE.Color(0xffffff);
 
   // add a light that will track the camera
-  tracklight = new THREE.DirectionalLight(0xffffff, 1.75);
+  // tracklight = new THREE.DirectionalLight(0xffffff, 1.75);
+  tracklight = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+  // tracklight = new THREE.Ambient( 0xffffff, 1 );  // Doesnt' work, why?
   scene.add(tracklight);
+  // default HemisphereLight from top to down, also add a down-to-up one
+  let up_light = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+  up_light.position.set(0, -1, 0);
+  scene.add(up_light);
 
   // base64 encoded GLTF (GLB) scene
   base64_data =
